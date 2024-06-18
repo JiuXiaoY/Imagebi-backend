@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.image.project.mapper.ChartMessageMapper">
+
+    <resultMap id="BaseResultMap" type="com.image.project.model.entity.ChartMessage">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="senderId" column="senderId" jdbcType="BIGINT"/>
+        <result property="receiverId" column="receiverId" jdbcType="BIGINT"/>
+        <result property="chartId" column="chartId" jdbcType="BIGINT"/>
+        <result property="messageContent" column="messageContent" jdbcType="VARCHAR"/>
+        <result property="messageType" column="messageType" jdbcType="INTEGER"/>
+        <result property="messageStatus" column="messageStatus" jdbcType="INTEGER"/>
+        <result property="messageTime" column="messageTime" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,senderId,receiverId,chartId,
+        messageContent,messageType,messageStatus,
+        messageTime,updateTime,isDelete
+    </sql>
+</mapper>
